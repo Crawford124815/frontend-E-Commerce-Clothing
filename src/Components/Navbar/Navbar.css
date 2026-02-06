@@ -64,6 +64,13 @@
     background: #f3f3f3;
         transform: scale(0.97);
 }
+.nav__login-cart img {
+    cursor: pointer;
+}
+.nav__login-cart img:active {
+    transform: scale(0.97);
+    z-index: 0;
+}
 .nav__cart-count {
     width: 22px;
     height: 22px;
@@ -76,4 +83,5 @@
     font-size: 14px;
     background: red;
     color: white;
+    z-index: 5;
 }

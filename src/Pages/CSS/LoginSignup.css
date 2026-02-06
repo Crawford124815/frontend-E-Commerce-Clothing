@@ -27,11 +27,11 @@
     font-weight: 500;
     cursor: pointer;
     border-radius: 20px;
-    transition: all 0.3s ease;
+    transition: all 0.125s ease;
 }
 .login__signup-container button:active {
     background: #b82727;
-    transform: scale(0.97);
+    transform: scale(0.98);
 }
 .login__signup-fields {
     display: flex;

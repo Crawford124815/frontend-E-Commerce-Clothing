@@ -19,6 +19,7 @@
     display: flex;
     list-style: none;
     gap: 50px;
+    padding: 0;
     color: #252525;
     font-size: 20px;
 }
@@ -58,9 +59,11 @@
 .footer__icons-container img {
     width: 30px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 .footer__icons-container img:active {
     transform: scale(0.95);
+    opacity: 0.75;
 }
 .footer__copyright {
     display: flex;
@@ -78,4 +81,43 @@
     border-radius: 10px;
     height: 3px;
     background: #c7c7c7;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7); /* Dim the background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.modal-content {
+  background: white;
+  padding: 10px 20px 20px 10px;
+  width: 30%;
+  height: 20%;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.modal-content button {
+    display: flex-end;
+    margin-left: 95%;
+    padding: 5px 8px;
+    border-radius: 7px;
+    color: white;
+    background: #ff4141;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+.modal-content button:active {
+    transform: scale(0.97);
+    background: #b82727;
 }
