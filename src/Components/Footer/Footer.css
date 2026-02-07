@@ -1,3 +1,6 @@
+a {
+    text-decoration: none;
+}
 .footer {
     display: flex;
     flex-direction: column;
@@ -27,6 +30,7 @@
     cursor: pointer;
     text-decoration: none;
     position: relative;
+     color: #383838;   
 }
 .footer__links li::after {
     content: '';
@@ -89,22 +93,26 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7); /* Dim the background */
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Ensure it stays on top */
+  z-index: 1000;
+  animation: fade__modal 1s ease;
+  transition: opacity 1s ease-in;
 }
 
 .modal-content {
   background: white;
-  padding: 10px 20px 20px 10px;
+  padding: 10px 20px 200px 10px;
   width: 30%;
-  height: 20%;
+  height: 10%;
   border-radius: 10px;
   text-align: center;
   min-width: 300px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0px 10px 10px 10px rgba(0,0,0,0.5);
+  animation: slide__Modal 1s ease-in-out;
+  transition: transform 1s ease, opacity 1s ease;
 }
 .modal-content button {
     display: flex-end;
@@ -116,8 +124,79 @@
     border: none;
     font-size: 14px;
     font-weight: 700;
+    position: absolute;
+    right: 10px;
+    z-index: 2;
 }
 .modal-content button:active {
     transform: scale(0.97);
     background: #b82727;
+}
+.modal-content h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #252525;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.modal-content-email {
+    padding-top: 60px;
+    color: #252525;
+}
+.modal-content p {
+    text-align: start;
+    padding-left: 32%;
+    font-size: 18px;
+    font-weight: 500;
+    color: #252525;
+    padding-bottom: 5px;
+}
+.gray {
+    color: #818181;
+}
+.email {
+    color: #252525;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.email:hover {
+    color: #ff4141;
+}
+.phone {
+    color: #252525;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.phone:hover {
+    color: #ff4141;
+}
+
+
+
+/* MODAL ANIMATION  */
+.fade__modal-in {
+    opacity: 1;
+}
+.fade__modal-out {
+    opacity: 0
+}
+.slide__modal-in {
+    transform: translateY(0);
+    opacity: 1;
+}
+.slide__modal-out {
+    transform: translateY(400px);
+    opacity: 0;
+}
+@keyframes fade__modal {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes slide__Modal {
+    from {transform: translateY(-400px);
+    opacity: 0;}
+    to {transform: translateY(0);
+    opacity: 1;}
 }
