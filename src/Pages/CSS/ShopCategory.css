@@ -77,3 +77,37 @@
     filter: invert(1);
     transform: rotate(270deg);
 }
+
+/* RESPONSIVENESS */
+
+@media (max-width: 1500px) {
+    .shop__category-products {
+       margin: 20px 100px;
+       gap: 10px;
+    }
+}
+@media (max-width: 1024px) {
+    .shop__category--index-sort {
+        margin: 0 100px;
+    }
+    .shop__category-products {
+       margin-left: 8%;
+       gap: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .shop__category--index-sort {
+        margin: 0 30px;
+        font-size: 14px;
+    }
+    .shop__category-products {
+       margin: 20px 50px;
+       grid-template-columns: 1fr 1fr;
+       gap: 20px;
+    }
+    .shop__category--load-more {
+        width: 150px;
+        height: 50px;
+        font-size: 14px;
+    }
+}

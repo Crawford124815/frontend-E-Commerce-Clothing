@@ -9,3 +9,29 @@
     text-transform: capitalize;
     cursor: default;
 }
+
+/* RESPONSIVENESS */
+
+@media (max-width: 1280px) {
+  .bread__crum {
+        margin: 30px 50px;
+        font-size: 14px;
+    }
+  }
+@media (max-width: 1024px) {
+    .bread__crum {
+        margin: 30px 30px;
+        font-size: 13px;
+    }
+}
+@media (max-width: 768px) {
+    .bread__crum {
+        margin: 30px 10px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 500px) {
+    .bread__crum {
+        font-size: 10px;
+    }
+}

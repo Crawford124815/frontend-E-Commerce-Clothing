@@ -8,7 +8,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
     padding-left: 180px;
     line-height: 1.1;
 }
@@ -49,4 +48,84 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* RESONSIVENESS */
+@media (max-width: 1280px) {
+    .hero__left  {
+        padding-left: 100px;
+    }
+    .hero__left h2 {
+        font-size: 22px;
+    }
+    .hero__left p {
+        font-size: 60px
+    }
+    .hero__hand-icon img {
+        width: 70px;
+    }
+    .hero__latest-btn {
+        width: 250px;
+        height: 60px;
+        font-size: 18px;
+    }
+    .hero__right img {
+        width: 500px;
+    }
+}
+@media (max-width: 1024px) {
+   .hero__left  {
+        padding-left: 80px;
+    }
+    .hero__left p {
+        font-size: 50px
+    }
+    .hero__hand-icon img {
+        width: 60px;
+    }
+    .hero__latest-btn {
+        width: 220px;
+        height: 60px;
+        font-size: 16px;
+    }
+    .hero__right img {
+        width: 400px;
+    }
+}
+@media (max-width: 768px) {
+    .hero__left  {
+        padding-left: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .hero__left h2 {
+        font-size: 22px;
+    }
+    .hero__left p {
+        font-size: 60px
+    }
+    .hero__hand-icon {
+        display: flex;
+        justify-content: center;
+    }
+    .hero__latest-btn {
+        width: 250px;
+        height: 60px;
+        font-size: 18px;
+    }
+    .hero__right {
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+    .hero  {
+       height: 50vh;
+    }
+    .hero__left p {
+        font-size: 40px;
+    }
+     .hero__hand-icon img {
+        width: 40px;
+    }
 }

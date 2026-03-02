@@ -48,3 +48,56 @@
     justify-content: flex-end;
     padding-top: 50px;
 }
+
+/* RESPONSIVENESS */
+@media (max-width: 1280px) {
+    .offers {
+        width: 90%;
+        padding: 60px 40px 0;
+    }
+}
+@media (max-width: 1024px) {
+    .offers {
+        width: 95%;
+        padding: 40px 30px 0;
+    }
+    .offers__left h1 {
+        font-size: 65px;
+    }
+     .offers__left p {
+        font-size: 18px;
+    }
+     .offers__left button {
+        width: 200px;
+        height: 30px;
+        font-size: 18px;
+    }
+    .offers__right img {
+        width: 300px;
+    }
+}
+@media (max-width: 768px) {
+    .offers {
+        width: 95%;
+        padding: 20px 25px 0;
+        height: auto;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .offers__left {
+        align-items: center;
+    }
+    .offers__right {
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+    .offers {
+        width: 95%;
+        padding: 20px 15px 0;
+        height: auto;
+    }
+    .offers__left h1 {
+        font-size: 50px;
+    }
+}

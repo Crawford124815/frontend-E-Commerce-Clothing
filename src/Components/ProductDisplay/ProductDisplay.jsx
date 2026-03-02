@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./ProductDisplay.css";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
+import { ShopContext } from "../../Context/ShopContent";
 
 const ProductDisplay = (props) => {
   const { product } = props;
+  const {addToCart} = useContext(ShopContext)
   const [sizeSelected, setSizeSelected] = useState(null);
 
   const sizes = ["S", "M", "L", "XL", "XXL"];
@@ -29,7 +31,6 @@ const ProductDisplay = (props) => {
       <div className="product__display-right">
         <div className="product__display--right-top">
           <h1>{product.name}</h1>
-          {/*  ADD LATER(css done)   
         <div className="product__display--right-stars">
         <img src={star_icon} alt="" />
         <img src={star_icon} alt="" />
@@ -37,7 +38,7 @@ const ProductDisplay = (props) => {
         <img src={star_icon} alt="" />
         <img src={star_dull_icon} alt="" />
         <p>(122)</p>
-        </div> */}
+        </div>
           <div className="product__display--right-prices">
             <div className="product__display--right-price-old">
               ${product.old_price}
@@ -70,7 +71,7 @@ const ProductDisplay = (props) => {
               ))}
             </div>
           </div>
-          <button>ADD TO CART</button>
+          <button onClick={() => {addToCart(product.id)}}>ADD TO CART</button>
           <p className="product__display--right-category">
             <span>Category :</span>Women , T-Shirt, Crop Top
             <span>Tags :</span>Modern, Latest

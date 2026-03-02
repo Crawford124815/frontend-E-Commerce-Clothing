@@ -147,7 +147,7 @@ a {
 }
 .modal-content p {
     text-align: start;
-    padding-left: 32%;
+    padding-left: 20px;
     font-size: 18px;
     font-weight: 500;
     color: #252525;
@@ -199,4 +199,21 @@ a {
     opacity: 0;}
     to {transform: translateY(0);
     opacity: 1;}
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+        height: 15%;
+    }
+    .modal-overlay {
+        height: 100%;
+    }
+    .footer__logo {
+        transform: scale(0.8);
+    }
+    .footer__social-icons {
+        transform: scale(0.9);
+    }
 }

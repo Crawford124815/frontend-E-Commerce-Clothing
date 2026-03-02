@@ -26,6 +26,7 @@
 .nav__menu a {
     color: #515151;
     text-decoration: none;
+    cursor: pointer;
 }
 .nav__menu li {
     display: flex;
@@ -84,4 +85,117 @@
     background: red;
     color: white;
     z-index: 5;
+}
+.nav__dropdown {
+    display: none;
+}
+
+/* RESPONSIVNESS */
+
+@media (max-width: 1280px) {
+    .navbar {
+        padding: 12px 50px;
+    }
+    .nav__logo img {
+        width: 40px;
+    }
+    .nav__logo p {
+        font-size: 24px;
+    }
+    .nav__menu {
+        gap: 30px;
+        font-size: 16px;
+    }
+    .nav__login-cart {
+        gap: 30px;
+    }
+    .nav__login-cart button {
+        width: 120px;
+        height: 45px;
+        font-size: 16px;
+    }
+    .nav__login-cart img {
+        width: 32px;
+    }
+    .nav__cart-count {
+        font-size: 12px;
+        margin-left: -40px;
+    }
+}
+
+@media (max-width: 1024px) {
+ .navbar {
+        padding: 12px 30px;
+    }
+    .nav__logo img {
+        width: 30px;
+    }
+    .nav__logo p {
+        font-size: 18px;
+    }
+    .nav__menu {
+        gap: 20px;
+        font-size: 14px;
+    }
+    .nav__login-cart {
+        gap: 20px;
+    }
+    .nav__login-cart button {
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .nav__login-cart img {
+        width: 28px;
+    }
+    .nav__cart-count {
+        font-size: 10px;
+        margin-left: -30px;
+ }
+}
+
+@media (max-width: 768px) {
+   .navbar {
+    padding: 10px 0;
+    width: 100vw;
+   }
+   .nav__dropdown {
+    display: block;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   font-size: 22px;
+   font-weight: 800;
+   color: #515151;
+   rotate: 90deg;
+   transition: 0.5s ease;
+   cursor: pointer;
+   }
+   .nav__menu {
+    opacity: 0;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+    top: 55px;
+}
+.nav__menu--active {
+    opacity: 1;
+   }
+   .nav__dropdown.open {
+    transform: scale(0.75);
+   }
+}
+@media (max-width: 500px) {
+    .navbar {
+        padding: 8px 0;
+        gap: 0;
+    }
+    .nav__logo {
+        transform: scale(0.8);
+    }
+    
 }

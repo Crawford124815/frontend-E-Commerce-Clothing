@@ -21,6 +21,7 @@
 .news__letter p {
     color: #454545;
     font-size: 20px;
+    text-align: center;
 }
 .news__letter div {
     display: flex;
@@ -40,6 +41,7 @@
     color: #616161;
     font-family: Poppins;
     font-size: 16px;
+    cursor: text;
 }
 .news__letter div button {
     width: 210px;
@@ -56,3 +58,56 @@
     background: #222222;
     transform: scale(0.97);
 }
+
+/* RESPONSIVENESS */
+
+@media (max-width: 1280px) {
+    .news__letter {
+        width: 90%;
+        padding: 0 40px;
+    }
+    .news__letter h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+    
+}
+@media (max-width: 1024px) {
+    .news__letter {
+        width: 80%;
+        padding: 0 40px;
+    }
+    .news__letter h1 {
+        font-size: 36px;
+    }
+    .news__letter div {
+        transform: scale(0.9);
+    }
+    
+}
+@media (max-width: 768px) {
+    .news__letter h1 {
+        font-size: 30px;
+    }
+    .news__letter p {
+        font-size: 18px;
+    }
+    .news__letter div {
+        transform: scale(0.7);
+    }
+}
+@media (max-width: 500px) {
+   .news__letter {
+    width: 75%;
+    margin-bottom: 20%;
+   }
+    .news__letter h1 {
+        font-size: 22px;
+    }
+    .news__letter p {
+        font-size: 16px;
+    }
+    .news__letter div {
+        transform: scale(0.5);
+    }
+   }

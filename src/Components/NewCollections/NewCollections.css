@@ -22,3 +22,38 @@
     margin-top: 50px;
     gap: 30px;
 }
+
+/* RESPONSIVENESS */
+@media (max-width: 1280px) {
+    .new__collections {
+        margin-bottom: 60px;
+    }
+    .new__collections h1 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 1024px) {
+    .new__collections h1 {
+        font-size: 36px;
+    }
+}
+@media (max-width: 768px) {
+    .collections {
+        gap: 10px;
+        margin: 30px 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .collections > :not(:nth-child(-n + 6)) {
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+     .collections {
+        grid-template-columns: 1fr 1fr ;
+        gap: 20px;
+    }
+    .new__collections h1 {
+        font-size: 24px;
+    }
+}
